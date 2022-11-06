@@ -56,7 +56,7 @@ class WebStripe extends StripePlatform {
     PaymentMethodParams data, [
     PaymentMethodOptions? options,
   ]) async {
-    final type = data.toJson()['type'];
+    final type = data.toJson()['paymentMethodType'];
     switch (type) {
       case 'Card':
         return createCardPaymentMethod(data, {});
